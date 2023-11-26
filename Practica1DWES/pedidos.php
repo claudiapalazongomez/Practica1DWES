@@ -26,6 +26,7 @@ if (isset($_POST['btnEliminarPedido'])) {
     if ($numero_pedidos > 0) {
         $numero_pedidos--;
     }
+    setcookie('numero_pedidos', $numero_pedidos, time() + 3600, '/');
     setcookie('fecha_ultimo_pedido', $fecha_ultimo_pedido, time() + 3600, '/');
 }
 
